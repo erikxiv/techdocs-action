@@ -1,16 +1,7 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'Build techdocs'
+description: 'Build techdocs'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://spotify:techdocs'
   args:
-    - ${{ inputs.who-to-greet }}
+  - 'build'
