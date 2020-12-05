@@ -2,6 +2,6 @@ name: 'Build techdocs'
 description: 'Build techdocs'
 runs:
   using: 'docker'
-  image: 'docker://spotify:techdocs'
+  image: 'docker://spotify/techdocs'
   args:
   - 'build'
